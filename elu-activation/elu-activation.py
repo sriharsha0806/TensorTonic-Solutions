@@ -5,5 +5,4 @@ def elu(x, alpha):
     """
     # write code here
     x = np.asarray(x)
-    ans = np.where(x>0, x, alpha*(np.exp(x)-1))
-    return list(ans)
+    return np.where(x>0, x, alpha*(np.exp(x)-1)).tolist()
